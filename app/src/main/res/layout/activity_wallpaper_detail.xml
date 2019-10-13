@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heart="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+
+        <variable
+            name="detailWallpaperActivity"
+            type="com.mgosu.callscreen.ui.activity.DetailWallpaperActivity" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_black_1000">
+
+        <VideoView
+            android:id="@+id/myVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/myImageViewThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+        <ProgressBar
+            android:id="@+id/myProgressBarLoading"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:id="@+id/groupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_tran">
+
+            <ImageButton
+                android:id="@+id/myImageButtonBack"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/arrow_left"
+                android:scaleType="fitXY"
+                android:background="?attr/selectableItemBackground"
+                android:tint="@color/md_white_1000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:text="@string/wallpaper"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_15sdp" />
+
+            <com.like.LikeButton
+                android:id="@+id/myLikeButton"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                heart:anim_scale_factor="2"
+                heart:circle_end_color="?colorAccent"
+                heart:circle_start_color="@color/color_white"
+                heart:dots_primary_color="?colorAccent"
+                heart:dots_secondary_color="@color/color_white"
+                heart:icon_size="@dimen/_25sdp"
+                heart:icon_type="heart"
+                heart:like_drawable="@drawable/ic_favorite_heart"
+                heart:liked="true"
+                heart:unlike_drawable="@drawable/ic_heart_whire" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true">
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/myProgressBar"
+                style="@style/DownloadSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:splitTrack="false"
+                android:progress="50"
+                android:max="100"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/myTextViewDownload"
+                android:text="@string/set_wallpaper"
+                android:textColor="@color/color_white"
+                android:gravity="center"
+                android:textSize="@dimen/_16sdp"
+                android:background="?attr/selectableItemBackground"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

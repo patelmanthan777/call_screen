@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.AppCompat.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MultiContactPicker.Azure" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/azureColorPrimary</item>
+        <item name="colorPrimaryDark">@color/azureColorPrimaryDark</item>
+        <item name="mcpToolbarTheme">@style/Toolbar.Azure</item>
+        <item name="mcpListPopupWindowStyleTheme">@style/Popup.Azure</item>
+    </style>
+
+    <style name="Toolbar.Azure" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+
+    <style name="Popup.Azure" parent="Widget.AppCompat.Light.ListPopupWindow">
+
+    </style>
+    <style name="MyCustomPickerTheme" parent="MultiContactPicker.Azure">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="mcpToolbarTheme">@style/MyCustomToolbarTheme</item>
+        <item name="mcpListPopupWindowStyleTheme">@style/MyCustomToolbarTheme</item>
+    </style>
+    <style name="MyCustomToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/color_thumswicht</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/color_thumswicht</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="DownloadSeekbar" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/bg_download_progressbar</item>
+        <item name="android:minHeight">@dimen/_40sdp</item>
+        <item name="android:maxHeight">@dimen/_40sdp</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:thumbOffset">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+</resources>

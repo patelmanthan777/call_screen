@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="loadingState"
+            type="Integer" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:background="@color/color_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayoutImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.design.widget.TabLayout>
+        <View
+            android:layout_below="@id/tabLayoutImage"
+            android:background="@color/color_line"
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerImage"
+            android:layout_below="@id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:visibility="@{(loadingState==-1)?View.VISIBLE:View.GONE}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/color_black"
+                android:text="@string/emptylist" />
+
+            <Button
+                android:id="@+id/myButtonRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/retry"
+                android:layout_marginTop="@dimen/_20sdp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="CallToActivity"
+            type="com.mgosu.callscreen.ui.activity.CallToActivity" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_call_2"
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:background="@android:color/transparent"
+            android:id="@+id/llTong"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:weightSum="10"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activity.CallActivity">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvNameCall"
+                    android:textColor="@color/color_white"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_22sdp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:id="@+id/tvPhoneCall"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4.5">
+
+                <LinearLayout
+                    android:visibility="visible"
+
+
+                    android:weightSum="10"
+                    android:orientation="vertical"
+                    android:id="@+id/myLayoutKeyPad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_20sdp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="5"
+                        android:layout_width="match_parent"
+                        android:weightSum="3"
+                        android:layout_height="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imgMute"
+                                android:src="@drawable/mute"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp" />
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textSize="17sp"
+                                android:text="@string/mute"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imgKeyPad"
+                                android:src="@drawable/keypad"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp" />
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:textSize="17sp"
+                                android:text="@string/keypad"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imgSpeaker"
+                                android:src="@drawable/speaker"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp" />
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:textSize="17sp"
+                                android:text="@string/speaker"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="5"
+                        android:layout_width="match_parent"
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/_15sdp"
+
+                        android:layout_height="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal|top"
+
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imgAddCall"
+                                android:src="@drawable/addcall"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp" />
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textSize="17sp"
+                                android:text="@string/add_call"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal|top"
+
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imgFaceTime"
+                                android:src="@drawable/facetime"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp" />
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:textSize="17sp"
+                                android:text="@string/facetime"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal|top"
+
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imgContacts"
+                                android:src="@drawable/contacts"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp" />
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:textSize="17sp"
+                                android:text="@string/contacts"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:id="@+id/myLayoutActionButtons"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:id="@+id/myLayoutUnLock"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp">
+
+                        <at.markushi.ui.CircleButton
+                            android:visibility="visible"
+                            android:id="@+id/myButtonEndCall"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/_15sdp"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:src="@drawable/call_end"
+                            app:cb_color="#FF001E"
+
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

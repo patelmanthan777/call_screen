@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="home_fragment"
+            type="com.mgosu.callscreen.ui.fragment.FragmentHome" />
+    </data>
+
+    <RelativeLayout
+        android:background="@color/color_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_alignParentTop="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/ivBackCallFlash"
+            android:padding="@dimen/_5sdp"
+            android:tint="@color/color_black"
+            android:src="@drawable/arrow_left"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:id="@+id/linearTab"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:id="@+id/RelativeLayoutFeature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/ivFeatured"
+                        android:src="@drawable/ic_featured"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp" />
+
+                    <TextView
+                        android:layout_below="@id/ivFeatured"
+                        android:id="@+id/tvFeatured"
+                        android:text="Feature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:id="@+id/lineFeature"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorAccent"
+                        android:layout_below="@id/tvFeatured"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="1dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:id="@+id/RelativeLayoutPopular"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/ivPopular"
+                        android:src="@drawable/ic_popular"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp" />
+
+                    <TextView
+                        android:layout_below="@id/ivPopular"
+                        android:id="@+id/tvPopular"
+                        android:text="Popular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="invisible"
+                        android:id="@+id/linePopular"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorAccent"
+                        android:layout_below="@id/tvPopular"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="1dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RelativeLayoutFavorite"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/ivFavoriteHeart"
+                        android:src="@drawable/ic_favorite_heart"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp" />
+
+                    <TextView
+                        android:layout_below="@id/ivFavoriteHeart"
+                        android:id="@+id/tvFavoriteHeart"
+                        android:text="@string/favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="invisible"
+                        android:id="@+id/lineFavoriteHeart"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorAccent"
+                        android:layout_below="@id/tvFavoriteHeart"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="1dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_below="@id/linearTab"
+            android:background="@color/color_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_below="@id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+</layout>

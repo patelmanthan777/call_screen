@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="home_activity"
+            type="com.mgosu.callscreen.ui.activity.MainActivity" />
+    </data>
+
+    <RelativeLayout
+        android:background="@color/color_background"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/myLayoutMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/navigation_bar"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/group_1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp">
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutCall"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_item_home"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_call"
+                        android:id="@+id/ivCallFlash"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp" />
+                    <TextView
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/color_black"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/call_flash"
+                        android:layout_below="@id/ivCallFlash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutWallpapers"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_item_home"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_wallpapers"
+                        android:id="@+id/ivWallpapers"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp" />
+                    <TextView
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/color_black"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/wallpapers"
+                        android:layout_below="@id/ivWallpapers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@id/group_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp">
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutRingtone"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_item_home"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_ringtone"
+                        android:id="@+id/ivRingtones"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp" />
+                    <TextView
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/color_black"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/ringtones"
+                        android:layout_below="@id/ivRingtones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutSetting"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_item_home"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_setting"
+                        android:id="@+id/ivSetting"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp" />
+                    <TextView
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/color_black"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/setings"
+                        android:layout_below="@id/ivSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.mgosu.callscreen.ui.wiget.slide.SliderView
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_slide"
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sliderAnimationDuration="1000"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderCircularHandlerEnabled="false"
+            app:sliderScrollTimeInSec="2"
+            app:sliderStartAutoCycle="true"
+            android:layout_above="@+id/myLayoutMiddle"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+        <LinearLayout
+            android:background="@color/color_white"
+            android:weightSum="4"
+            android:paddingEnd="@dimen/_30sdp"
+            android:paddingStart="@dimen/_30sdp"
+            android:orientation="horizontal"
+            android:id="@+id/navigation_bar"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:id="@+id/ivHeart"
+                android:layout_weight="1"
+                android:src="@drawable/ic_hear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/ivShare"
+                android:layout_weight="1"
+                android:src="@drawable/ic_share"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/ivGift"
+                android:layout_weight="1"
+                android:src="@drawable/ic_gift"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/ivGame"
+                android:layout_weight="1"
+                android:src="@drawable/ic_game"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

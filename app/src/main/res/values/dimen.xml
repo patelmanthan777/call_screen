@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_indicator_size">8dp</dimen>
+    <dimen name="default_indicator_margins">5dp</dimen>
+    <dimen name="default_dash_indicator_width">12dp</dimen>
+    <dimen name="round_square_indicator_radius">2dp</dimen>
+    <dimen name="max_slider_indicator_size">16dp</dimen>
+
+    <dimen name="pp_margin_default">20dp</dimen>
+    <dimen name="pp_padding_default">13dp</dimen>
+    <dimen name="pp_loader_size">45dp</dimen>
+    <dimen name="pp_margin_end">5dp</dimen>
+</resources>
